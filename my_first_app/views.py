@@ -5,11 +5,11 @@ from .models import Product
 from .serializers import ProductSerializer
 
 # Create your views here.
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 def product_list_view(request):
     products = Product.objects.all()
     serialized_products = ProductSerializer(products, many=True)
     context = {
         'products': serialized_products.data
     }
-    return Response(serialized_products.data)
+    return Response(context)
