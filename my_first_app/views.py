@@ -27,22 +27,9 @@ def product_list_view(request):
         return Response(serialized_product.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# Mock data storage
-comments = []  # A list to store Comment instances
-
 @api_view(['GET', 'POST'])
 def comment_list_view(request):
-    if request.method == 'GET':
-        # Serialize all comments in the mock data store
-        serialized_comments = CommentSerializer(comments, many=True)
-        return Response(serialized_comments.data)
-
-    elif request.method == 'POST':
-        # Deserialize and validate the incoming data
-        serialized_comment = CommentSerializer(data=request.data)
-        if serialized_comment.is_valid():
-            # Create a Comment instance from validated data
-            comment = Comment(**serialized_comment.validated_data)
-            comments.append(comment)  # Add to mock data store
-            return Response(serialized_comment.data, status=status.HTTP_201_CREATED)
-        return Response(serialized_comment.errors, status=status.HTTP_400_BAD_REQUEST)
+    if request.method
+    comment = Comment('arefin@gmail.com', 'This is very good product')
+    serialized_comment = CommentSerializer(comment)
+    return Response(serialized_comment.data)
