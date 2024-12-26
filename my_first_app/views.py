@@ -29,7 +29,6 @@ def product_list_view(request):
 
 @api_view(['GET', 'POST'])
 def comment_list_view(request):
-    if request.method
     comment = Comment('arefin@gmail.com', 'This is very good product')
     serialized_comment = CommentSerializer(comment)
     return Response(serialized_comment.data)
