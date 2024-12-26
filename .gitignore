@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+__pycache__/
+*.so
+
+# Django specific
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Environment files
+.env
+*.env
+.env.*
+
+# Virtual environment
+venv/
+env/
+.virtualenv/
+*.virtualenv
+
+# Cache files
+*.swp
+*.swo
+*.swn
+*.bak
+*~
+*.tmp
+*.cache
+*.pid
+*.seed
+*.old
+*.orig
+*.rej
+
+# Media files (only if you don't want to version-control them)
+media/
+
+# Static files (collected via collectstatic)
+staticfiles/
+static/
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+desktop.ini
+
+# Docker specific
+*.bak
+.dockerignore
+docker-compose.override.yml
+
+# Node.js (if you use Node for frontend in your project)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.tox/
+.nox/
